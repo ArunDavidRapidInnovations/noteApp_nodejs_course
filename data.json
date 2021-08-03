@@ -1,1 +1,1 @@
-{"data":[{"type":"Ex","amount":100},{"type":"Ex","amount":50},{"type":"In","amount":400},{"type":"Ex","amount":50},{"type":"In","amount":60},{"type":"Ex","amount":100},{"type":"Ex","amount":50},{"type":"In","amount":400},{"type":"Ex","amount":50},{"type":"In","amount":60},{"type":"In","amount":20},{"type":"In","amount":40},{"type":"Ex","amount":300}]}
+{"data":[{"type":"In","amount":50},{"type":"Ex","amount":50},{"type":"Ex","amount":50},{"type":"Ex","amount":50},{"type":"In","amount":60},{"type":"In","amount":20},{"type":"In","amount":40},{"type":"In","amount":300}]}
