@@ -28,9 +28,9 @@ file.on('line', (line) => {
 });
 
 file.on('close', function () {
-  console.log(chalk.black.bgRed('Total Expenses: ' + total_expenses + 'Rs '));
-  console.log(chalk.black.bgGreen('Total Expenses: ' + total_income + 'Rs '));
+  console.log(chalk.red.inverse(' Total Expenses: ' + total_expenses + 'Rs '));
+  console.log(chalk.green.inverse(' Total Expenses: ' + total_income + 'Rs '));
   console.log(
-    chalk.black.bgBlue('Net: ' + (total_income - total_expenses) + 'Rs '),
+    chalk.blue.inverse(' Net: ' + (total_income - total_expenses) + 'Rs '),
   );
 });
