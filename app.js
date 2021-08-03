@@ -4,7 +4,7 @@ const yargs = require('yargs');
 const total = require('./services/totalData');
 const addData = require('./services/addData');
 
-let filePath = path.join(__dirname, 'fin.csv');
+let filePath = path.join(__dirname, 'data.json');
 
 // Customize yargs version
 yargs.version('1.1.0');
