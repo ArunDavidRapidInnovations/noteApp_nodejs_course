@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
 
-let filePath = path.join(__dirname, 'README.md');
+let filePath = path.join(__dirname, 'fin.csv');
 
 let file = readline.createInterface({
   input: fs.createReadStream(filePath),
@@ -12,15 +12,20 @@ let file = readline.createInterface({
 
 let lineCount = 0;
 
+let total_expenses = 0;
+let total_income = 0;
+
 file.on('line', (line) => {
-  const num_of_times = line.split(':')[1];
-  fs.writeFileSync(
-    filePath,
-    `# This Program Has been Run ***: ${parseInt(num_of_times) + 1} :*** times`,
-  );
-  lineCount += 1;
+  let data = line.split(',');
+  if (data[0] == 'Ex') {
+    total_expenses = total_expenses + parseInt(data[1], 10);
+  } else {
+    total_income = total_income + parseInt(data[1], 10);
+  }
+  // console.log(parseInt(data[1]));
 });
 
-if (lineCount == 0) {
-  fs.appendFileSync(filePath, 'This Program Has been Run : 0 : times');
-}
+file.on('close', function () {
+  console.log(total_expenses);
+  console.log(total_income);
+});
