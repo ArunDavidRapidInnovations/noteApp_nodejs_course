@@ -1,11 +1,7 @@
 const path = require('path');
 const chalk = require('chalk');
 const yargs = require('yargs');
-const total = require('./services/totalData');
-const addData = require('./services/addData');
-const readData = require('./services/readData');
-const removeData = require('./services/removeData');
-const editData = require('./services/editData');
+const { total, addData, readData, removeData, editData } = require('/services');
 
 let filePath = path.join(__dirname, 'data.json');
 
